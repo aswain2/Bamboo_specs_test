@@ -3,7 +3,7 @@ version: 2
 plan:
   project-key: SPEC
   key: ROCKET
-  name: Build the rocket 3
+  name: Build the rocket 4
 stages:
   - Build hull:
     - Build
