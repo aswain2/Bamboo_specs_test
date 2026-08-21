@@ -1,14 +1,50 @@
 ---
 version: 2
-plan:
-  project-key: SPEC
-  key: ROCKET
-  name: Build the rocket 4
-stages:
-  - Build hull:
-    - Build
 
-Build:
-  tasks:
-    - script:
-      - echo 'Hello World!'
+repositories:
+- test3:
+    type: github
+    base-url: https://github.com
+    repository: aswain2/Testing1
+    branch: main
+    app-id: '4624167'
+    ssh-key: |
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEpQIBAAKCAQEAvwEyO6osHfSOosd6zJcVwuOudmfAx6EZI4/HV1iVfjz1Wae8
+      fAUhyS4zJlLw0MxsRP/g/dqkY71IMxHw5hAOk1b2/2Zf9TcQdhCIoD7DeaYb1LHC
+      F7loie1BUeHUnLxJQH/yEH8B7NBVOa/5nF+guOsNlWVy52PdZBSHT/cBIqKim8AP
+      EGzr/+Wr8t6iQsryfi1gQkApGJyNVNFCqADeZNsHH2GnJBRxGQbyrEg6eT4Y+aJt
+      a8dd1bURi/N5RlRhPZCvqhcuqHnmNBvvt+m7zwVT6lr99Gs/NzaLvbkmwl+cG9wo
+      /dM3oijwLqj/+E1NhzLJF5NX/1O+Bx+CJeom4QIDAQABAoIBAQCcP/JD9NXaO3Fj
+      oCPIsd/PakoR+pYtuI/EE55SydihSGS9TwZVvi0BUpXtR/RQGqqHV3tKr03DedhS
+      Tt7ulTwXNBEipTDifIUu0B+0VyO5pDUoLbJFjhsCmd/RiBhRj4WtCf2PmRaOD29o
+      nZhoX6IvI7oc+LyipYM6l8CJndqD5XOxbs4SUNtj8geDHAWoN04b3AYH+hVOV7pF
+      F8LPDXnIpVQAu6q5lGVmpu1MO+GAfTZ36sjqFnSCbh7K3KLR69QT7/c0mXdLGZQ9
+      ftEweqzSapUIGAIk8fQk2XW5rWIwyc0Gwr1z4xI7tZ2kfOnt+MCacJ0OPYyVzSA7
+      64gx8+wBAoGBAPWPsuo0e0D3D7Y3RBy2ve38BYLEmPnA54f2tbjP2/4SrF5mu7u9
+      14zv9iucgmaT7Ei8rq3vCI+UnwmWpxubS+OjpVMxmKX8OhWJreqzl5EoVG+Wl7tj
+      Nd4ajavjQv/yKUaaFJ33HSjAWlqqS3UAy9/dz65YitC70ZmCcnam78rxAoGBAMcf
+      yf1zOQSv4R3z0VXo9/8MvJIBv+AYBai6S2ducTJYpHJo2VvkwwSKMEFEyg9Gy0bO
+      hyPpd3ke06vQayW7AeQ6TbZVnTWVkrtzKIUuvj+ZTfl/HX9vXMwFgKf9SRNlq940
+      VEqbmEBvDb3xL6cRi6J6Qti9zGgTgFtK6wZGSbrxAoGAVElpsQgokkj7RKE9qNl0
+      4d4SiisvEvMKxdmB0JjQOypvrct3ft6PwRmQlrGW9NyrSuAw2RTmDFqIKENkwo4Q
+      g2dlVOP+MGMeEMx8PMY+LR35tX+sPy6zi7Pzkt9j3PRjBI/YqcvrX1R+7wXq9pM6
+      Z3H8WiycIT+Glzl2TpHIVxECgYEAnSrqM7KOfrST6yBXSofntthGvrfCyw4q6VKh
+      0bHKhwKQSf2YEoAtrZelHt883XHzYKAC6sWMF33NdP+8krtYctvSGujYfULh3jK2
+      +Og8IdbPRO6gScWMaTyun+m7lCPb1DdZkMnfEnyVTCbihevDWytFN+4XOM6rsWMg
+      voMcDwECgYEAv+sz1+CqSHfOW0MSMUGTWKGEpyGFQt0/2jTUdxfR5rN20qY01f3J
+      OaOJ89X/1Vd4cqrtbQ+8KCIBsxhQZk5RQjanK6jXwFz5cRxj75SF6cg99YhF7O5o
+      1d3++tKiynjHkTvgwFJnZHW/SyG/rD2/UC3LWvtqJ+dyf/5rTO9wVCE=
+      -----END RSA PRIVATE KEY-----
+    command-timeout-minutes: '180'
+    lfs: false
+    webhook-enabled: false
+    verbose-logs: false
+    use-shallow-clones: false
+    cache-on-agents: true
+    submodules: false
+    ssh-key-applies-to-submodules: true
+    fetch-all: false
+    viewer:
+      com.atlassian.bamboo.plugins.atlassian-bamboo-plugin-git:githubViewer: {}
+...
